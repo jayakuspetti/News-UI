@@ -1,0 +1,26 @@
+<p>news-list works!</p>
+<!-- <ul>
+    <li *ngFor="let res of newslist | async"> 
+        id : {{res.id}}
+        title : {{res.title}}
+        Url : {{res.url}}
+
+    </li>
+
+</ul> -->
+
+<table>
+    <tr>
+      <th>id</th>
+      <th>Title</th>
+      <th>Url</th>
+    </tr>
+    <tr *ngFor="let res of newslist | async">
+      <td>{{res.id}}</td>
+      <td>{{res.title}}</td>
+      <td><a href="res.url">{{res.url}}</a></td>
+    </tr>
+
+<ng-template #noNews>
+    <p>No list</p>
+</ng-template>
